@@ -58,6 +58,16 @@ body {
   background-color: #ffffff;
   margin: 10px 10px;
   padding: 5px;
+  list-style: none;
+}
+
+.newAsset  {
+  margin: 5px 5px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
 }
 
 /* Buttons */
@@ -69,6 +79,16 @@ body {
   border: none;
   background-color: #4fc3f7;
   color: white;
+}
+
+.addButton {
+  width: 83px;
+  height: 36px;
+  border-radius: 2px;
+  border: none;
+  background-color: #4fc3f7;
+  color: white;
+  margin: 5px;
 }
 
 .confirmationButton:hover {
@@ -155,6 +175,7 @@ body {
   padding: 5px 10px;
   user-select: auto;
   border-radius: 2px;
+  list-style: none;
 }
 
 .listText:hover {

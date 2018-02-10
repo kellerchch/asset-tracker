@@ -58,38 +58,46 @@ class App extends Component {
     return (
       <div id="app">
           <Header />
-          <div className='left-container'>
-                  <form onSubmit={this.handleSubmit}>
-                  <label>
-                    Asset Name:
-                    <input
-                      name="name"
-                      type="text"
-                      value={this.state.assets.name}
-                      onChange={this.handleSubmit} />
-                  </label>
-                    <br />
-                  <label>
-                    Price:
-                    <input
-                      name="price"
-                      type="number"
-                      value={this.state.assets.price}
-                      onChange={this.handleSubmit} />
-                  </label>
-                  <label>
-                    Brand:
-                    <input
-                      name="brand"
-                      type="text"
-                      value={this.state.assets.brand}
-                      onChange={this.handleSubmit} />
-                  </label>
-                  {/* <input type="submit" value="Submit" /> */}
-                  </form>
-                  <button onClick={this.submitAsset}>Add Asset</button>
-  
-          </div>
+         
+            <div className='left-container'>
+                <ul>
+                    <form onSubmit={this.handleSubmit}>
+                    <li className="listText">
+                      <label>
+                        Asset Name:
+                        <input class="newAsset"
+                          name="name"
+                          type="text"
+                          value={this.state.assets.name}
+                          onChange={this.handleSubmit} />
+                      </label>
+                    </li>
+                    <li className="listText">
+                      <label>
+                        Price:
+                        <input class="newAsset"
+                          name="price"
+                          type="number"
+                          value={this.state.assets.price}
+                          onChange={this.handleSubmit} />
+                      </label>
+                    </li>
+                    <li className="listText">
+                      <label>
+                        Brand:
+                        <input class="newAsset"
+                          name="brand"
+                          type="text"
+                          value={this.state.assets.brand}
+                          onChange={this.handleSubmit} />
+                      </label>
+                    </li>
+                    {/* <input type="submit" value="Submit" /> */}
+                    </form>
+                    <button className="addButton" onClick={this.submitAsset}>Add Asset</button>
+                  </ul>
+            </div>
+         
           <div className="main-container">
             <AssetList assets={this.state.assets} selectAsset={ this.selectAsset } />
             <AssetEditor 
